@@ -15,7 +15,8 @@ def splash_scr_response(request):
 			response_json["version"]=version
 			response_json["compulsory_update"]=compulsory_update
 			response_json["message"]="version_data found"
-		except:                                              #bug here
+			
+		except Exception,e:                                              #bug here
 			response_json["success"]=False     
 			response_json["message"]="error"
 
